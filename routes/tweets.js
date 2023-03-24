@@ -5,7 +5,22 @@ require('../models/connection');
 const Tweet = require('../models/tweets');
 
 //ROUTE GET TWEET
-//Afficher tous les tweets existants dans la base de donnée tweets
+// Afficher tous les tweets existants dans la base de donnée tweets
+router.get('/', (req, res) => {
+  Tweet.find()
+    .then(data => {
+      res.json(data);
+    })
+    .catch(error => {
+      res.json({ error: error.message });
+    });
+});
+
+
+
+
+
+//rechercher les tweets
 router.get('/:trends', (req, res) => {
   Tweet.find({"trends": { $regex: req.params.message, $options: 'i' }})
   .then(data => {

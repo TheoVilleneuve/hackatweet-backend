@@ -1,0 +1,17 @@
+[
+    {
+        "firstname": "Alice",
+        "username": "alice1",
+        "password": "mypassword123",
+        "token": "token1234",
+        "canTweet": true
+    }
+
+    {
+        "firstname": "Bob",
+        "username": "bob2",
+        "password": "password123",
+        "token": "mytoken456",
+        "canTweet": false
+    }
+]

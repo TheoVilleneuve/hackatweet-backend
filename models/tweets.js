@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const tweetSchema = mongoose.Schema({
   tweetContent: String,
-  hastags: Array,
-  likes: Array,
+  author: String,
+  
 });
 
 const Tweet = mongoose.model('tweets', tweetSchema);

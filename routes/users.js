@@ -35,6 +35,7 @@ router.post('/signup', (req, res) => {
   });
 });
 
+
 router.post('/signin', (req, res) => {
   if (!checkBody(req.body, ['username', 'password'])) {
     res.json({ result: false, error: 'Missing or empty fields' });
@@ -49,6 +50,8 @@ router.post('/signin', (req, res) => {
     }
   });
 });
+
+
 
 router.get('/canTweet/:token', (req, res) => {
   User.findOne({ token: req.params.token }).then(data => {
